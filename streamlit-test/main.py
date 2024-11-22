@@ -48,7 +48,7 @@ if zdc is None:
 
 # st.write(get_accessibilite(zdc))
 
-
+st.image(f"http://estacions.albertguillaumes.cat/img/paris/{zdc.lower()}.png")
 # st.markdown(f"![Foo](http://estacions.albertguillaumes.cat/img/paris/{zdc.lower()}.png)")
 
 for key, values in get_list_of_equipements(zdc).items():
