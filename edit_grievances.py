@@ -38,20 +38,20 @@ def add_grievances(equipment_id, state, commentaire):
         df.to_csv(file_out, header=None)
 
 
-add_grievances(1038, UNAVAILABLE, "l'ascenseur était très sale.")
+# add_grievances(1038, UNAVAILABLE, "l'ascenseur était très sale.")
 
-add_grievances(1038, UNAVAILABLE, "ascenseur il est tout cassé")
+# add_grievances(1038, UNAVAILABLE, "ascenseur il est tout cassé")
 
-add_grievances(1038, UNAVAILABLE, "ascenseur il est tout cassé")
+# add_grievances(1038, UNAVAILABLE, "ascenseur il est tout cassé")
 
-add_grievances(1038, AVAILABLE, "ascenseur il est bien")
+# add_grievances(1038, AVAILABLE, "ascenseur il est bien")
 
-add_grievances(1038, AVAILABLE, "ascenseur il est bien")
+# add_grievances(1038, AVAILABLE, "ascenseur il est bien")
 
-add_grievances(318, UNAVAILABLE, "marche pas")
+# add_grievances(318, UNAVAILABLE, "marche pas")
 
-add_grievances(1156, UNAVAILABLE, "marche pas")
+# add_grievances(1156, UNAVAILABLE, "marche pas")
 
-add_grievances(1681522, UNAVAILABLE, "escalator recule au lieu d'avancer")
+# add_grievances(1681522, UNAVAILABLE, "escalator recule au lieu d'avancer")
 
-add_grievances(1681522, UNAVAILABLE, "escalatueur recule au lieu d'avancer")
+# add_grievances(1681522, UNAVAILABLE, "escalatueur recule au lieu d'avancer")

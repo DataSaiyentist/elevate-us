@@ -34,19 +34,6 @@ def get_all_zdc() -> list[str]:
     return referential["ZdCName"].sort_values().unique()
 
 
-def get_list_and_state_of_equipments(station_id, line_id, direction):
-    pass
-    # {type_equipement: [ascenseur/escalator/...], id: ..., etat: [1/0], position: ...}
-    # equipements = get_list_of_equipements(station_id, line_id, direction)
-    # equipements_with_states = add_state_to_equipements(equipements)
-    # return equipements_with_states
-
-
-def save_signal(station_id, line_id, direction, message: dict):
-    # message : {equipment_id: ..., positive:[true/false], comments: ...}
-    pass
-
-
 def get_list_of_equipements(zdc: str) -> dict[str, pd.Series]:
     # Escaliers
     BUCKET = "dlb-hackathon"
