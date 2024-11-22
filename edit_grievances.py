@@ -2,6 +2,9 @@
 import pandas as pd
 import s3fs
 import os
+from datetime import datetime
+
+from add_state_to_equipements import AVAILABLE, UNAVAILABLE
 
 # !pip install s3fs
 
@@ -12,10 +15,10 @@ S3_ENDPOINT_URL = "https://" + os.environ["AWS_S3_ENDPOINT"]
 fs = s3fs.S3FileSystem(client_kwargs={"endpoint_url": S3_ENDPOINT_URL})
 
 
-def add_grievances(equipment_id, datetime, state, commentaire):
+def add_grievances(equipment_id, state, commentaire):
 
     df = pd.DataFrame(data={"equipment_id": equipment_id,
-                            "datetime": datetime, "state": state, "commentaire": commentaire}, index=[0])
+                            "datetime": datetime.now(), "state": state, "commentaire": commentaire}, index=[0])
 
     # Ecrire
     BUCKET_OUT = "dlb-hackathon"
@@ -26,29 +29,29 @@ def add_grievances(equipment_id, datetime, state, commentaire):
         df.to_csv(file_out, header=None)
 
 
-# add_grievances(1038, "2024-11-21T18:08:00", "negatif",
+# add_grievances(1038, UNAVAILABLE,
 #                "ascenseur il est tout cassé")
 
-# add_grievances(1038, "2024-11-21T18:11:00", "negatif",
+# add_grievances(1038, UNAVAILABLE,
 #                "ascenseur il est tout cassé")
 
-# add_grievances(1038, "2024-11-21T18:20:00", "negatif",
+# add_grievances(1038, UNAVAILABLE,
 #                "ascenseur il est tout cassé")
 
-add_grievances(1038, "2024-11-21T18:40:00", "positif",
-               "ascenseur il est bien")
+# add_grievances(1038, AVAILABLE,
+#                "ascenseur il est bien")
 
-add_grievances(1038, "2024-11-21T18:40:00", "positif",
-               "ascenseur il est bien")
+# add_grievances(1038, AVAILABLE,
+#                "ascenseur il est bien")
 
-# add_grievances(318, "2024-11-21T18:11:00", "negatif",
+# add_grievances(318, UNAVAILABLE,
 #                "marche pas")
 
-# add_grievances(1156, "2024-11-21T18:11:00", "negatif",
+# add_grievances(1156, UNAVAILABLE,
 #                "marche pas")
 
-# add_grievances(1681522, "2024-11-21T18:11:00", "negatif",
+# add_grievances(1681522, UNAVAILABLE,
 #                "escalator recule au lieu d'avancer")
 
-# add_grievances(1681522, "2024-11-21T18:11:00", "negatif",
+# add_grievances(1681522, UNAVAILABLE,
 #                "escalatueur recule au lieu d'avancer")
