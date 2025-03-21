@@ -4,7 +4,7 @@ Ce projet a été développé dans le cadre du [Hackathon IA et Mobilités](http
 
 Notre équipe désirait se concentrer sur le dysfonctionnement des équipements générant un problème d'accessibilité aux usagers. Pour cela, nous proposons d'intégrer au calculateur d'itinéraire d'Île de France une solution interactive et communautaire considérant l'état de fonctionnement de ces derniers.
 
-## Le problème et la proposition de valeur
+## Contexte
 
 Notre problématique est le **manque de visibilité des dysfonctionnements d’équipements sur un parcours**.  
 En conséquence, il est fréquent de noter que les personnes en mobilité réduite évitent d'utiliser les transports publics par crainte de perdre du temps ou d'être bloqué.  
@@ -12,18 +12,18 @@ Nous observons également que les usagers valides sont passifs face à de telles
 
 Notre solution **s'adresse ainsi à tous les usagers d'Île de France Mobilités**, avec un bénéfice tout particulier pour les personnes en mobilité réduite. Par exemple, lors des jeux para-olympiques énormément d'utilisateurs en mobilité réduite ont empruntés les transports en commun. Leur temps de voyage peut être plus conséquent qu'un utilisateur régulier, surtout par période d'affluence.
 
-### La solution <img src="prototype.png" align="right" width="180" height="300"/>
+### Solution proposée <img src="prototype.png" align="right" width="180" height="300"/>
 
 Elevate Us est une solution pour identifier le parcours le plus court, en temps réel, tout en indiquant les équipements fonctionnels. Au quel cas, l'utilisateur peut signaler le problème grâce à un commentaire ou un message vocal. Lorsque plusieurs signalements sont recensés, alors une indication de dysfonctionnement est générée dans une base de données reliée à IDFM et un avertissement apparaît sur l'application des usagers.
 
 Les données mobilisées proviennent de la plateforme Île de France Mobilités ou du datalab (lorsqu'il s'agissait de données privées).
 Elles sont focalisées sur les équipements (état, fonctionnement et localisation des ascenseurs et/ou des escalators) que nous avons fusionné avec la liste des gares.
 
-## Installation et utilisation
+## Installation
 
 ```bash
 python -m streamlit run main.py
 ```
-## La licence
+## Licence
 
 Le code et la documentation de ce projet sont sous licence [MIT](LICENSE).
